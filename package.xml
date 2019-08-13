@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Alphabetic_Categories_By_Synotive</name>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OSL</license>
     <channel>community</channel>
@@ -12,9 +12,9 @@ So Customer don&#x2019;t need to go to menu / sub menu after showing in the Alph
 </description>
     <notes>Alphabetic Categories  is stable version. We have tested it many different version.</notes>
     <authors><author><name>Synotive Technologies</name><user>Synotive</user><email>magento@synotive.com</email></author></authors>
-    <date>2015-01-28</date>
-    <time>10:26:10</time>
+    <date>2015-02-25</date>
+    <time>11:40:53</time>
     <contents><target name="magecommunity"><dir name="SPL"><dir name="Alphacategories"><dir name="Block"><file name="Alphacategories.php" hash="fa86808dd74d12c75e7b1bcd8072bb42"/></dir><dir name="Helper"><file name="Data.php" hash="e0cd457cd9708a158e89539af7497452"/></dir><dir name="controllers"><file name="IndexController.php" hash="35cd2fd9801cd88a529041ce142f4c48"/></dir><dir name="etc"><file name="config.xml" hash="d7a34e035bbcceeefa9961327709703b"/><file name="system.xml" hash="0e2b7f138c4dc85c0d8f3848f0da0afe"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="SPL_Alphacategories.xml" hash="a565c0ea6d7cb244ef18ccf3d9e5838f"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="alphacategories.xml" hash="e71a42181bf167ad7e389b94e9ee2b19"/></dir><dir name="template"><dir name="alphacategories"><file name="alphacategories.phtml" hash="1742ae0a298accfd34e2887db4defe13"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir><dir name="css"><dir name="alphacategories"><file name="alphacategories.css" hash="8e333b070c78dc04988db9c29c2ff208"/></dir></dir></dir><dir name="js"><dir name="lib"><file name="jquery-1.10.2.min.js" hash="628072e7212db1e8cdacb22b21752cda"/></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.0.0</min><max>5.6.2</max></php></required></dependencies>
+    <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
 </package>
