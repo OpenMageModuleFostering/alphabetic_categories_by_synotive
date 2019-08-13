@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Alphabetic_Categories_By_Synotive",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "Alphabetic Categories provides the functionality to show alphabetic wise categories with filter option.",
+    "authors": [
+    {
+        "name": "Synotive Technologies",
+        "email": "magento@synotive.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

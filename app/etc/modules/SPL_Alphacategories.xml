@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SPL_Alphacategories>
+            <active>true</active>
+            <codePool>community</codePool>
+        </SPL_Alphacategories>
+    </modules>
+</config> 

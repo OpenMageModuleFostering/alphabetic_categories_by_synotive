@@ -1,0 +1,111 @@
+<?php
+/**
+ * SPL
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category    SPL
+ * @package     SPL_Alphacategories
+ * @copyright   Copyright (c) 2015 SPL. 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+
+
+<script>
+jQuery.noConflict();
+jQuery( document ).ready(function() {
+ 
+    var _alphabets = jQuery('.alphabet > a');
+    var _contentRows = jQuery('.alpha-category-list div');
+var _contentHead = jQuery('.title');
+    _alphabets.click(function() { 
+        var _letter = jQuery(this), _text = jQuery(this).html(), _count = 0;
+        if(_text == "All"){
+            _contentRows.show();
+            _contentHead.show();
+            _alphabets.removeClass("active");
+            _letter.addClass("active");
+        }
+        else {
+            _alphabets.removeClass("active");
+            _letter.addClass("active");
+            _contentHead.hide();
+            _contentRows.hide();
+            _contentRows.each(function(i) { 
+                var _cellText = jQuery(this).eq(0).text();
+                var firstchar=jQuery.trim(_cellText);
+                var jcharfirst=firstchar.charAt(0);        
+                if(_text==jcharfirst){                   
+                     jQuery(this).show();
+                     jQuery(this).children('span').show();
+                }
+            });
+        }
+    });
+
+});
+</script>
+<?php $innerhtml = '';
+$_helper = Mage::helper('catalog/category') ?>
+<?php $_categories = $this->getCollection(); ?>
+<?php $currentCategory = Mage::registry('current_category') ?>
+<?php if (count($_categories) > 0): ?>
+        	<?php foreach(range('A','Z') as $i) { ?>
+           <?php $innerhtml .= '
+         <div class="list-block-1"><span class="title">'.$i.'</span>
+            <ul>';?>
+                <?php $cnt=0;
+                foreach ($_categories as $category): $alpha= substr($category->getName(),0,1); 
+                if($alpha==$i){ $cnt++;
+            $category = Mage::getModel('catalog/category')->load($category->getId()); ?>
+            <?php $_productNameStripped = $this->stripTags($category->getName(), null, true); ?>
+            	<?php $innerhtml .= '<li>
+                	<h2 class="product-name">
+                    	<a href="'.$category->getUrl().'" title="'.$_productNameStripped.'">'.$category->getName().'</a>';?>
+                    <?php $innerhtml .= '</h2> 
+                </li>'?>
+                <?php }
+                    
+                endforeach; ?>
+            <?php if($cnt==0){$innerhtml .='<li><h2 class="product-name">'.$this->__('No Category Available.').'</h2></li>';} $innerhtml .= '</ul>
+        </div>';?>
+        <?php } ?>
+<?php endif; ?> 
+<h1><?php echo $this->__('Alphabetic Categories List'); ?></h1>
+<div class="alphabet" style="">
+<a class="first active" href="#">All</a>
+<a href="#">A</a>
+<a href="#">B</a>
+<a href="#">C</a>
+<a href="#">D</a>
+<a href="#">E</a>
+<a href="#">F</a>
+<a href="#">G</a>
+<a href="#">H</a>
+<a href="#">I</a>
+<a href="#">J</a>
+<a href="#">K</a>
+<a href="#">L</a>
+<a href="#">M</a>
+<a href="#">N</a>
+<a href="#">O</a>
+<a href="#">P</a>
+<a href="#">Q</a>
+<a href="#">R</a>
+<a href="#">S</a>
+<a href="#">T</a>
+<a href="#">U</a>
+<a href="#">V</a>
+<a href="#">W</a>
+<a href="#">X</a>
+<a href="#">Y</a>
+<a class="last" href="#">Z</a>
+</div>
+    <div class="alpha-category-list"> <?php echo $innerhtml; ?></div>
+

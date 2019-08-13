@@ -1,0 +1,49 @@
+/**
+ * SPL
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category    SPL
+ * @package     SPL_Alphacategories
+ * @copyright   Copyright (c) 2015 SPL. 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+h1 { font-size:2em;}
+.alpha-category-list .title { float:left; color:#000000; margin-bottom:2px; padding-bottom:0px;  width:100%; font-size:18px; text-decoration:underline;  }
+.alpha-category-list a, .alpha-category-list a:visited { float:left; width:100%; color:#d96708; text-decoration:none; }
+.alpha-category-list a:hover, .alpha-category-list a:focus { color:#000;}
+.alpha-category-list { clear:both; float:left; margin:0px; padding:0px; list-style:none; width:100%; }
+.alpha-category-list li { float:left; margin:0px 2% 10px 0px;  padding:0px; list-style:none; width:23%; }
+.alpha-category-list li ul li { clear:both; float:left; margin:0px 0px 5px;  width:100%; border:0px; }
+.alpha-category-list li ul li {}
+.alpha-category-list li:nth-child(4n+4) {margin-right:0px;}
+.alpha-category-list li:nth-child(4n+5) { clear:both;  } 
+
+.list-block-1 { clear:both; float:left; margin-bottom:10px; width:100%; border-bottom:dashed 1px #ccc; }
+.alpha-category-list {    border-spacing: 2px;}
+.alphabet {    margin: 0 0 10px;    overflow: hidden; }
+ 
+.alphabet a, .alpha-category-list div {    transition: background-color 0.3s ease-in-out;    -moz-transition: background-color 0.3s ease-in-out;    -webkit-transition: background-color 0.3s ease-in-out; }
+.alphabet a {   padding:5px 0px; width:3.40%; min-width:29px;    float: left;    color: #333;    cursor: pointer;    border: 1px solid #CCC;    display: block;    font-size: 14px;
+    text-align: center;    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);       text-decoration: none;    background-color: #F1F1F1; }
+.alphabet a.first {  border-radius: 3px 0 0 3px; }
+.alphabet a.last {    border-right: 1px solid silver;    border-radius: 0 3px 3px 0; }
+.alphabet a:hover,.alphabet a.active { background: #FBF8E9; font-weight: normal; text-decoration:underline; }
+
+
+@media screen and ( max-width:1480px) {
+	 
+}
+@media screen and ( max-width:640px) { 
+.alpha-category-list li { width:48%;}
+.alpha-category-list li:nth-child(4n+5) { clear:none;  } 
+.alpha-category-list li:nth-child(2n+3) { clear:both;  } 
+}
+@media screen and ( max-width:360px) { 
+.alpha-category-list li { width:98%;}
+}
